@@ -49,3 +49,33 @@ print('{} x {} = {}  '.format(ni , 7 , ni*7))
 print('{} x {} = {}  '.format(ni , 8 , ni*8))
 print('{} x {} = {}  '.format(ni , 9 , ni*9))
 print('{} x {} = {}  '.format(ni , 10 , ni*10))
+
+
+#pintar a parede
+larg = float(input('Largura da parede :'))
+alt = float(input('Altura da parede:'))
+area = larg*alt
+print('Sua parede tem {} x {} e sua area é {}m^2'.format(larg , alt , area))
+tinta = area/2
+print('Para pintar essa parede vc vai preceisar de {}L de tinta.'.format(tinta))
+
+#porcentagem
+preço = float(input('Qual é o preço do produto? R$'))
+novo = preço-((preço*5) / 100)
+print('Na promoção com desconto de 5% é {}R$'.format(novo))
+
+#Reajuste Salarial
+Sal = float(input('Digite o salario:'))
+NSal = Sal + ((Sal*15)/100)
+print('O reajuste será de {:.2f}'.format(NSal))
+
+#conversão de temperatura
+Cel = float(input('Digite a temperatura em ºC:'))
+far = ((9*Cel)/5)+32
+print('A temperatura em ºF:',format(far))
+
+#Aluguel de carro (paga 15 centavos por km rodado e 60 reais por dia) 
+Dias = int(input('Quandos dias o carro ficou alugado?: '))
+Km = float(input('Quantos Km rodados?:'))
+pago = (Dias*60)+(Km*0.15)
+print('O valor a ser pago é {}'.format(pago))
