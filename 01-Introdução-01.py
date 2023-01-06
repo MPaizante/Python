@@ -23,6 +23,10 @@ A = input('Qual ano você nasceu?')
 print ('Você nasceu no dia', D, 'de', M, 'do ano de', A)
 V1 = input('Digite o primeiro valor.')
 V2 = input('Digite o segundo valor.')
-print('A soma de', V1,'+',V2, 'é igual a', V1+V2 ,'.')
+S = V1+V2
+print('A soma de', V1,'+',V2, 'é igual a', S ,'.') 
+#n funcionou acima
+C = input('Digite seu c.')
+print ('seu L é {}!'.format(C)) 
 
 
