@@ -37,12 +37,26 @@ print('Centena: {}'.format(pelec))
 print('Milhar: {}'.format(pelem))
 
 #Verificador de letra
-cidade = srt(input('Em que cidade vc nasceu:')).strip()
+
+cidade = str(input('Em que cidade vc nasceu:')).strip()
 print(cidade[0:5].upper() == 'Santo') #n importa se escrever maiusculo ou minusculo, o upper vai jogar oque escrever para maiusculo
 
 
 #String dentro de String
+nomect = str(input('Qual nome:')).strip()
+print('Seu nome tem silva? {}'.format('silva' in nomect.lower()))
 
 
+#Primeira e ultima letra
+frase1 = str(input('Digite uma frase:')).strip().upper()
+print('A letra A aparece {} vezes na frase.'.format(frase1.count('A')))
+print('A primeiro letra A apareceu na posição {}'.format(frase1.find('A')+1))
+print('A ultima letra apareceu na posição {}.'.format(frase.rfind('A')+1))
+
+#Primeiro e ultimo nome
+bmx = str(input('fala o nome cachorra:')).strip()
+bmxn = bmx.split()
+print('Seu primeiro nome é {}.'.format(bmxn[0]))
+print('Seu ultimo nome é {}'.format(bmxn[len(bmxn)-1]))
 
 
