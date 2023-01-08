@@ -36,5 +36,13 @@ print('Dezena: {}'.format(peled))
 print('Centena: {}'.format(pelec))
 print('Milhar: {}'.format(pelem))
 
+#Verificador de letra
+cidade = srt(input('Em que cidade vc nasceu:')).strip()
+print(cidade[0:5].upper() == 'Santo') #n importa se escrever maiusculo ou minusculo, o upper vai jogar oque escrever para maiusculo
+
+
+#String dentro de String
+
+
 
 
