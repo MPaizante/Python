@@ -1,4 +1,4 @@
-import math
+import math , random
 num = int(input('Digite um numero:'))
 raiz = math.sqrt(num)
 print('A raiz de {} é igual a {:.2f}. '.format(num , raiz))
@@ -34,5 +34,5 @@ lista = [a1 , a2 , a3 , a4]
 escolhido = random.choice(lista)
 print('O aluno escolhido foi {}'.format(escolhido))
 
-#Tocando MP3
+
 
