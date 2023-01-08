@@ -25,4 +25,14 @@ print('O angulo de {} tem cosseno {:.2f}'.format(angulo , cosseno))
 tangente = math.tan(math.radians(angulo))
 print('O angulo de {} tem tangente {:.2f}'.format(angulo , tangente))
 
+#sorteio aleatorio
+a1 = str(input('A1:'))
+a2 = str(input('A2:'))
+a3 = str(input('A3:'))
+a4 = str(input('A4:'))
+lista = [a1 , a2 , a3 , a4]
+escolhido = random.choice(lista)
+print('O aluno escolhido foi {}'.format(escolhido))
+
+#Tocando MP3
 
