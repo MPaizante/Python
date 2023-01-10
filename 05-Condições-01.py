@@ -103,3 +103,23 @@ if c > a and c > b:
     mai = c
     print('Menor digitiro {}'.format(men))
     print('Maior digito {}'.format(mai))
+    
+
+
+#Aumentos multiplos.
+Sal = float(input('Qual salario:'))
+if Sal <= 1250:
+    NSal = Sal + ((Sal*15)/100)
+else:
+    NSal = Sal + ((Sal*10)/100)
+    print('Quem ganhava {:.2f} passa a ganhar {:.2f} agora ganha.'.format(Sal , NSal))
+    
+    
+#Analisando trianguo v1.0
+r1 = float(input('Primeiro segmento:'))
+r2 = float(input('Segundo segmento:'))
+r3 = float(input('Terceiro segmento:'))
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 +r2:
+    print('Os seguimentos podem ser um triangulo!')
+else:
+    ('N é um triangulo.')
