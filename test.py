@@ -1,9 +1,9 @@
-velocidade = float(input('Qual velocidade do carro?'))
-multa = (velocidade-80) * 7
-if velocidade > 80:
-    print('Multado!')
-    multa = (velocidade-80) * 7
-    print('Vc vai pagar {:.2f}R$'.format(multa))
-    print('dirija com segurança')
+d = float(input('Qual distancia?'))
+print('Você está preste a começar uma viagem de {}Km'.format(d))
+if d <= 200:
+    pre1 = d * 0.50
+    print('O preço vai ser R${:.2f}'.format(pre1))
+    
 else:
-    print('Tenha um bom dia.')
+    pre = d * 0.45
+    print('O preço vai ser R${:.2f}'.format(pre))
