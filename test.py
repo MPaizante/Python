@@ -1,14 +1,8 @@
-nb = int(input('Digite um numero inteiro:'))
-print('''Escolha a base de conversão:
-[1] Binario
-[2] Octal
-[3] Hexadecimal  ''')
-op = int(input('Sua opção:'))
-if op == 1:
-    print('{} convertendo apra Binario é igual a {}'.format(nb, bin(nb)))
-elif op == 2:
-    print('{} convertido para Octal é igual a {}'.format(nb , oct(nb)))
-elif op == 3:
-    print('{} convertido para Hexadecimal fica {}'.format(nb , hex(nb))) 
+nc1 = int(input('Digite um numero:'))
+nc2 =  int(input('Digite um numero:'))
+if nc1 > nc2:
+    print('primeiro é maior')
+elif nc1 == nc2:
+    print('Iguais')
 else:
-    print('[ERRO] TENTE NOVAMENTE')
+    print('Sgundo é maior')    
