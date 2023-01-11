@@ -1,4 +1,5 @@
 from datetime import date
+from random import randint
 #Aprovando Emprestimo
 vc = float(input('QUal valor da casa?'))
 Salvc = float(input('Qual salario do comprador?'))
@@ -118,3 +119,72 @@ elif 30<= imc < 40:
     print('Obeso')
 elif imc >= 40:
     print('cuidado')
+
+#Gerenciador de Pagamentos
+print('{:=^40'.format('Paizante'))
+pre25 = float(input('Preço das compras:'))
+print('''Formas de Pagamentos
+      [1] A vista
+      [2] 1x Cartão
+      [3] 2x Cartão
+      [4] 3x cartão ou mais''')
+op25 = int(input('Qual opção?:'))
+if op25 == 1:
+    t25 = pre25 - ((pre25*10)/100)
+elif op25 == 2:
+    t25 = pre25 - ((pre25 * 5)/100)
+    print('Sua compra de R${:.2f} vai custar R${:.2f} no final.'.format(pre25 , t25))
+elif op25 == 3:
+    t25 = pre25
+    par25 = pre25/2
+    print('Sua compra de {} custará {}'.format(t25 , par25))
+elif op25 == 4:
+    t25 = pre25 + (pre25 * 20/100)
+    t25p = int(input('Quantas parcelas?:'))
+    parcela = t25 / t25p
+    print('Sua compra será parcelada em {}x de R${:.2f} com juros.'.format(t25p , parcela))
+    print('Sua compra de R${:.2} vai custar R${:.2f} no final.'.format(pre25 , t25))
+
+
+
+#Pedra Papel e tesoura.
+itens67 = ('Pedra' , 'Papel' , 'Tesoura')
+computador = randint(0,2)
+print('''Suas Opções:
+      [0] Pedra
+      [1] Papel
+      [2] Tesoura''')
+jogador = int(input('Qual sua jogada?'))
+print('computador jogou{}.').format(itens67[computador])
+print('Jogador jogou {}.').format(itens67[jogador])
+if computador == 0:  #Pedra
+    if jogador ==0:
+        print('Empate')
+elif jogador == 1:
+    print('Venceu')   
+elif jogador == 2:
+    print('Perdeu')   
+else:
+    print('Jogada invalida')      
+else computador == 1 :#Papel
+if jogador ==0:
+    print('Pedeu')  
+elif jogador == 1:
+    print('Empate') 
+elif jogador == 2:
+    print('Venceu')  
+else:
+    print('Jogada invalida')
+
+elif computador == 2:   #Tesoura
+if jogador ==0:
+    print('venceu')  
+elif jogador == 1:
+    print('Perdeu') 
+elif jogador == 2:
+    print('Empate')
+else:
+    print('Jogada invalida')
+
+
+
