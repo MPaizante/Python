@@ -50,3 +50,71 @@ elif AnoIdade == 18:
     print('Se alista')
 else:
     print('Ainda n precisa se alistar.')
+    
+
+
+#Nota Media
+nt1 = float(input('Digite a nota:'))
+nt2 = float(input('Digite a nota:'))
+ntg = (nt1 + nt2)/2
+if 10 >= ntg > 7:
+    print('Aprovado')
+elif 7 > ntg > 5:
+    print('Recuperação')
+elif ntg < 4.9:
+    print('Reprovado')
+else:
+    print('Erro')
+
+
+    
+#Classificação de Atletas categorias
+nata1 = date.today().year
+nata2 = int(input('Ano de nascimento:'))
+nata3 = nata1 - nata2
+print('O atleta tem {} anos.'.format(nata3))
+if nata3 <= 9:
+    print('Mirim')
+elif nata3 > 9 and nata3 <=14:
+    print('Infantil')
+elif  nata3 <= 19:
+    print('Junior')
+elif nata3 <= 25:
+    print('Senior')
+elif nata3 <= 60:
+    print('Adulto')
+else:
+    print('Idoso')  
+    
+    
+#Analisando triangulos
+rt1 = float(input('Digite um valor:'))
+rt2 = float(input('Digite um valor:'))
+rt3 = float(input('Digite um valor:'))
+if rt1 < rt2+rt3 and rt2 < rt1 +rt3 and rt3 < rt1 + rt2:
+    print('Pode ser um triangulo.')
+    if rt1 == rt2 == rt3:
+        print('Equilatero')
+    elif rt1 != rt2 != rt3 != rt1:
+        print('Escaleno')
+    else:
+        print('Isoceles') 
+else:
+    print('N pode ser um triangulo.')
+    
+    
+#IMC
+p12 = float(input('Digite o peso:'))
+a12 = float(input('Digite a altura em metros: '))
+imc = p12/(a12**2)
+print('O IMC dessa pessoa é {:.1f}'.format(imc))
+if imc < 18.5:
+    print('Abaixo do peso')
+elif 18.5 <= imc <= 25:
+    print('Ta normal filhao!')
+elif 25 <= imc < 30:
+    print('Sobrepeso')
+elif 30<= imc < 40:
+    print('Obeso')
+elif imc >= 40:
+    print('cuidado')
