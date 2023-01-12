@@ -1,11 +1,3 @@
-n = int(input('fala numero:'))
-for c in range(0 , n+1):
-    print(c)
-print('Fim')
-
-i = int(input('I:'))
-f = int(input('F:'))
-p = int(input('P:'))
-for c in range(i , f+1 , p):
-    print(c)
-print('Fim')
+num85 = int(input('Digite um numero>'))
+for num86 in range(1 , 11):
+    print('{} x {:2} = {}'.format(num85 , num86 , num85*num86))
