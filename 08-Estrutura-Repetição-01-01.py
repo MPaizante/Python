@@ -64,3 +64,42 @@ for par5 in range(1 ,7):
         spar += spar 
         cpar += 1
 print('Vc informou {} numero e a soma foi de {}'.format(cpar , spar))
+
+
+#Progressão aritmetica
+proga = int(input('Primeiro termo:'))
+progar = int(input('Razão:'))
+progat = int(input('Termo:'))
+for proga1 in range(proga , progat , progar):
+    print('{}'.format(proga1), end=' > ')
+print('Acabou!')
+
+
+#Numeros primos
+Nprimo = int(input('Digite um numero:'))
+tot = 0
+for primo in range(1 , Nprimo + 1):
+    if Nprimo % primo == 0:
+        print('\033[34m' , end=' ')
+        tot += 1
+    else:
+        print('\033[m' , end=' ' )
+    print('{}'.format(primo), end=' ')
+print('O numero {} foi divisivel {} vezes'. format (Nprimo , tot))
+if tot == 2 :
+    print('É por isso ele é primo')
+else:
+    print('Por isso n é primo.')
+    
+    
+#Detector de Palindromo
+frasep = str(input('Digite a frase:')).strip().upper()
+palavrasp = frasep.split()
+juntop = '*'.join(palavrasp)
+inversop = ''
+for letrap in range(len(juntop) -1, -1 ,-1):
+    inversop += juntop[letrap]
+if inversop == juntop:
+    print('Temos um palindromo!')
+else:
+    print('A frase n é um palindromo.')
