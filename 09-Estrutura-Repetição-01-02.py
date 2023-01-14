@@ -1,5 +1,6 @@
 #REPETIÇÃO WHILE
 from random import randint
+from math import factorial
 
 c = 1
 while c <10:
@@ -102,3 +103,34 @@ print('Fim do programa')
 
 
 #calculo do fatorial
+n3 = int(input('Digite um numero:'))
+f = factorial(n3)
+print('O fatorial de {} é {}.'.format(n , f))
+#ou 
+n4 = int(input('Digite um numero:'))
+c4 = n4
+f4 = 1
+print('Calculando o fatocial de {}! = '.format(n4), end=' ')
+while c4 > 0:
+    print('{} '.format(c4), end=' ')
+    print(' x ' if c4 > 1 else ' = ', end=' ')
+    f4 = f4 * c4
+    c4 -= 1
+print('O fatorial de {}'.format(f4))
+
+
+#Progressao Aritmetica v2.0
+print('Gerador de PA')
+print('=-'*10)
+primeiro1 = int(input('Primeiro termo:'))
+razão1 = int(input('Razão:'))
+termo1 = primeiro1
+cont1 = 1
+fimtermo = int(input('Digite quantos termos: '))
+while cont1 <= fimtermo:
+    print('{}'.format(termo1), end=' ')
+    termo1 += razão1
+    cont1 += 1
+print('Fim')
+
+

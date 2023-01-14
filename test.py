@@ -1,13 +1,15 @@
-n1 = int(input('Primeiro Valor:'))
-n2 = int(input('Segundo valor: '))
-opção = 0
-while opção != 5:
-    
+from math import factorial
 
-    print('''        [1] somar
-        [2] Multiplicar
-        [3] Maior numero
-        [4] Novos numeros
-        [5] Sair do Programa''')
-    opção = str(input(('Qual é a sua opção:')))
-print('Fim do programa')
+print('Gerador de PA')
+print('=-'*10)
+primeiro1 = int(input('Primeiro termo:'))
+razão1 = int(input('Razão:'))
+termo1 = primeiro1
+cont1 = 1
+fimtermo = int(input('Digite quantos termos:'))
+while cont1 <= fimtermo:
+    print('{}'.format(termo1), end=' ')
+    termo1 += razão1
+    cont1 += 1
+print('Fim')
+
