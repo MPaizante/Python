@@ -1,14 +1,13 @@
-maiorp = 0
-menorp = 0
-for pesoq in range(1 , 6):
-    peso1 = float(input('Digite o {}ª peso:'.format(pesoq)))
-    if pesoq == 1:
-        maiorp = peso1
-        menorp = peso1
-    else:
-        if peso1 > maiorp:
-            maiorp = peso1
-        if peso1 < menorp:
-            menorp = peso1
-print('O maior foi {} kg.'.format(maiorp))
-print('O menor peso foi {} kg'.format(menorp))
+n1 = int(input('Primeiro Valor:'))
+n2 = int(input('Segundo valor: '))
+opção = 0
+while opção != 5:
+    
+
+    print('''        [1] somar
+        [2] Multiplicar
+        [3] Maior numero
+        [4] Novos numeros
+        [5] Sair do Programa''')
+    opção = str(input(('Qual é a sua opção:')))
+print('Fim do programa')
