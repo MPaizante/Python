@@ -99,3 +99,6 @@ while opção != 5:
         print('Opção invalida.')
         
 print('Fim do programa')
+
+
+#calculo do fatorial
