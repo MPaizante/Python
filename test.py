@@ -1,7 +1,14 @@
-Nprimo = int(input('Digite um numero:'))
-for primo in range(1 , Nprimo + 1):
-    if Nprimo % primo == 0:
-        print('\033[34m' , end='')
+maiorp = 0
+menorp = 0
+for pesoq in range(1 , 6):
+    peso1 = float(input('Digite o {}ª peso:'.format(pesoq)))
+    if pesoq == 1:
+        maiorp = peso1
+        menorp = peso1
     else:
-        print('\033[m', end='')
-    print('{}'.format(primo), end='')
+        if peso1 > maiorp:
+            maiorp = peso1
+        if peso1 < menorp:
+            menorp = peso1
+print('O maior foi {} kg.'.format(maiorp))
+print('O menor peso foi {} kg'.format(menorp))

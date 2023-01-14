@@ -1,4 +1,5 @@
 from time import sleep
+from datetime import date
 for c in range(1,6):
     print('oi')
 print('Fim')
@@ -103,3 +104,64 @@ if inversop == juntop:
     print('Temos um palindromo!')
 else:
     print('A frase n é um palindromo.')
+
+
+#grupo maior idade
+AnAtual = date.today().year
+totmaior = 0 
+totmenor = 0
+for pess in range(1 , 8):
+    nascimentog = int(input('Nascimento:'))
+    idadeg = AnAtual - nascimentog
+    print('Essa pessoa tem {} anos.'.format(idadeg))
+    if idadeg > 17:
+        totmaior += 1
+        print('Maior de idade')
+    else:
+        totmenor += 1
+        print('Menor de idade')
+print('Tivemos {} maior de idade e tivemos {} menor de idade.'.format(totmaior , totmenor))
+print('Fim.')
+
+#maior menor sequencia 
+maiorp = 0
+menorp = 0
+for pesoq in range(1 , 6):
+    peso1 = float(input('Digite o {}ª peso:'.format(pesoq)))
+    if pesoq == 1:
+        maiorp = peso1
+        menorp = peso1
+    else:
+        if peso1 > maiorp:
+            maiorp = peso1
+        if peso1 < menorp:
+            menorp = peso1
+print('O maior foi {} kg.'.format(maiorp))
+print('O menor peso foi {} kg'.format(menorp))
+
+
+#Analisador completo
+somaidade = 0
+mediaidade = 0
+maioridadehomem = 0
+nomevelho = ''
+totmulher20 = 0
+for pessoas in range( 1 , 5):
+    print('----------------- {}ª pessoa ----------------'.format(pessoas))
+    nomepessoa = str(input('Nome:' )).strip()
+    idadepessoa = int(input('Idade:'))
+    sexopessoa = str(input('Sexo:')).strip()
+    somaidade += idadepessoa
+    if pessoas == 1 and sexopessoa in 'Mm' :
+        maioridadehomem = idadepessoa
+        nomevelho = nomepessoa
+    if sexopessoa in 'Mm' and idadepessoa > maioridadehomem:
+        maioridadehomem = idadepessoa
+        nomevelho = nomepessoa
+    if sexopessoa in 'Ff' and idadepessoa < 20:
+        totmulher20 += 1 
+mediaidade = somaidade / 4
+print('A media de idade do grupo é de  {} anos'.format(mediaidade))
+print(' O homem mais velho tem {} anos e se chama {}.'.format(maioridadehomem , nomevelho))
+print('Ao todo tem {} mulheres de 20 anos. '.format(totmulher20))
+ 
