@@ -23,3 +23,11 @@ if n != 0:
         impar += 1
 print('Acabou')
 print('{} par {} impar.'.format(par , impar))
+
+
+
+sexo1 = str(input('Sexo:')).strip().upper()[0]
+idade1 = int(input('Idade:'))
+while sexo1 not in 'MmFf':
+    sexo1 = str(input('dados invalidos, informe o sexo:')).strip().upper()[0]
+print('Sexo {} salvo.'.format(sexo1))
