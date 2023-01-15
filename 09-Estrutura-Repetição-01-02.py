@@ -1,6 +1,7 @@
 #REPETIÇÃO WHILE
 from random import randint
 from math import factorial
+from tkinter import NUMERIC
 
 c = 1
 while c <10:
@@ -153,6 +154,72 @@ while mais != 0:
     print('PAUSA')
     mais = int(input('Quantos termos você quer a mais?'))
 print('Fim')
+
+#sequencia de fibonacci 
+print('Sequencia de Fibonacci ')
+print('-'*20)
+n5 = int(input('Quantos termos vc quer mostrar?'))
+t1 = 0
+t2 = 1
+print('{} → {}'.format(t1 , t2))
+cont2 = 3
+while cont2 <= n5:
+    t3 = t1 + t2
+    print('→ {}'.format(t3), end=' ')
+    t1 = t2 
+    t2 = t3 
+    cont2 += 1
+print('Fim')
+
+
+#Tratando varios valores v1.0
+numst = 0
+contnum = 0
+somanum = 0
+numst = int(input('Digite um numero. Para parar digite 999.'))
+while numst != 999:   
+    somanum += numst
+    contnum += 1
+    numst = int(input('Digite um numero. Para parar digite 999.'))
+print('Voce digitou {} numeros e a soma é {}.'.format(contnum , somanum ))
+print('Acabou')
+
+
+#maior e menor valores
+resp = 'S'
+media = 0
+mediasoma = 0
+quantidade = 0
+maior2 = 0
+menor2 = 0
+while resp in 'Ss':
+    numero = int(input('Digite um numero:'))
+    mediasoma += numero
+    quantidade += 1   
+    if quantidade == 1:
+        maior2 == menor2 == numero
+    else:
+        if numero > maior2:
+            maior2 = numero
+        if numero < menor2:
+            menor2 = numero
+    resp = str(input('Quer continuar S/N ?')).upper().strip()[0]
+media = mediasoma / quantidade
+print('Vc digitou {} vezes e a media foi {}.'.format(quantidade , media))
+print('O maior numero foi {} e o menor foi {}.'.format(maior2 , menor2))
+print('Acabou.')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

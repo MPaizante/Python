@@ -1,15 +1,13 @@
-from math import factorial
+numst = 0
+contnum = 0
+somanum = 0
+numst = int(input('Digite um numero. Para parar digite 999.'))
+while numst != 999:   
+    somanum += numst
+    contnum += 1
+    numst = int(input('Digite um numero. Para parar digite 999.'))
+print('Voce digitou {} numeros e a soma é {}.'.format(contnum , somanum ))
+print('Acabou')
 
-print('Gerador de PA')
-print('=-'*10)
-primeiro1 = int(input('Primeiro termo:'))
-razão1 = int(input('Razão:'))
-termo1 = primeiro1
-cont1 = 1
-fimtermo = int(input('Digite quantos termos:'))
-while cont1 <= fimtermo:
-    print('{}'.format(termo1), end=' ')
-    termo1 += razão1
-    cont1 += 1
-print('Fim')
+
 
