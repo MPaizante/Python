@@ -1,13 +1,13 @@
-numst = 0
-contnum = 0
-somanum = 0
-numst = int(input('Digite um numero. Para parar digite 999.'))
-while numst != 999:   
-    somanum += numst
-    contnum += 1
-    numst = int(input('Digite um numero. Para parar digite 999.'))
-print('Voce digitou {} numeros e a soma é {}.'.format(contnum , somanum ))
-print('Acabou')
+n = 0
+s = 0
+contador = 0
+while True:
+    n = int(input('Leia:'))
+    if n == 999:
+        break
+    contador += 1
+    s += n
+print(f'A soma é {s} a quantidade de vezes foi {contador}.')
 
 
 
