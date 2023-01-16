@@ -67,13 +67,33 @@ while True:
 print(f'Game over! Voce venceu {v} vezes.')
     
 #Estatistica em produtos
+Total1 = 0
+TotalM = 0
+barato = 0
+caro = 0
+contador1 = 0
+barato1 =' '
 while True:
     produto = str(input('Nome do Produto: '))
     preço = float(input('Preço:'))
-    
+    Total1 += preço
+    if preço > 1000:
+        TotalM += 1
+    if contador1 == 1:
+        barato == preço 
+    else:
+        if preço < barato:
+            barato = preço
+            barato1 = produto
     res = ' '
     while res not in 'SN':
-        res = str(input('Quer continuar s ou n? ')).strip()
+        res = str(input('Quer continuar s ou n? ')).strip().upper()[0]
+    if res == 'N':
+        break
+print('{:-^40}'.format('Fim do programa.'))
+print(f'O total da compra foi R${Total1:.2f} ')
+print(f'Temos {TotalM} produtos custando mais de mil reais.')
+print(f'O produto mais barato foi R${barato:.2f}')
 
 
     
