@@ -96,4 +96,31 @@ print(f'Temos {TotalM} produtos custando mais de mil reais.')
 print(f'O produto mais barato foi R${barato:.2f}')
 
 
+
+#Simulado Banco
+print('Banco CEV')
+valor = int(input('Valor quer sacar:'))
+total26 = valor
+cedula = 50
+totalcedula = 0
+
+while True:
+    if total26 >= cedula:
+        total26 -= cedula
+        totalcedula += 1 
+    else:
+        if totalcedula > 0:
+            if cedula == 50:
+                cedula = 20
+            elif cedula == 20:
+                cedula = 10
+            elif cedula == 10:
+                cedula = 1
+            totalcedula = 0
+            if total26 == 0:
+                break
+print('Volte sempre')
+    
+
+
     
