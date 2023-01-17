@@ -43,3 +43,35 @@ for n2 in n1:
     print(f'{n1}' , end='')
 print(f'O maior valor sorteado foi {max(n1)}')
 print(f'O menor valor foi {min(n1)}')
+
+
+#Analise de dados em uma Tupla
+n2 = int(input('Digite um numero:')) ,int(input('Digite um numero:')) ,int(input('Digite um numero:')), int(input('Digite um numero:'))
+print(f'Vc digitou os valores {n2}')
+print(f'O valor 9 apareceu {n2.count(9)} vezes.')
+if 3 in n2:  
+    print(f'O valor 3 apareceu na {n2.index(3)}ª posição.')
+else:
+    print('Em nenhuma posição.')
+for p in n2:
+    if p % 2 == 0: 
+        print(n2 , end=' ')
+
+
+#lista de preços
+listagem = ('Lapis', 1.75 ,'borraça',2 ,'cadeno', 15.90 ,'estojo',25 ,'transferidor', 4.20  ,'compasso', 9.99 ,'mochila', 120.32 ,'caneta', 22.30 ,'livro', 34.90 )
+print(listagem)
+for item in range(0 , len(listagem)):
+    if item % 2 == 0:
+        print(f'{listagem[item]:.<30}', end=' ')
+    else:
+        print(f'R${listagem[item]:>7.2f}', end=' ')
+        
+        
+#Contando vogais em tupla
+p1 = ('aprender','programar','linguagem','python','curso','gratis','estudar','praticar','trabalhar','merdao','programador','futuro')
+for p in p1:
+    print(f'\nNa palavra {p.upper()} temos', end='')
+    for letra in p:
+        if letra.lower() in 'aeiou':
+            print(letra, end=' ')
