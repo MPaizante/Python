@@ -1,26 +1,4 @@
-total18 = 0
-totalM = 0
-totalF = 0
-while True:
-    i = int(input('Idade:'))
-    s = ' '
-    while s not in 'MF':
-        s = str(input('Sexo:')).strip().upper()[0]
-    if i >= 18:
-        total18 += 1
-    if s  == 'M':
-        totalM += 1
-    if s == 'F' and i < 20:
-        totalF += 1               
-    resp = ' '
-    while resp not in 'SN':
-        resp = str(input('Quer continuar ? [S/N]')).strip().upper()[0] 
-    else:
-        print('.') 
-         
-    print('Acabou')
-    print(totalM)
-    print(totalF)    
-
-# Estatisticas em produtos
-
+times  = ('c','p','s','cr','f','v','ch','atlmg','b','atpr','ba','Sp','flu','spt','vit','cot','ava','pp','atgo',) 
+print(f'Lista de times: {times}')
+print(f'Os cinco primeiros são {times[:5]}')
+print(f'Os quatro ultimos são {times[-4:]}')
