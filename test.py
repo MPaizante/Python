@@ -1,15 +1,9 @@
-listanum = []
-listmaior = 0
-listmenor = 0
-for c in range(0 , 5):
-    listanum.append(int(input(f'Digite um valor para {c}: ')))
-    if c == 0:
-        listmaior = listmenor = listanum[c]
-    else:
-        if listanum[c] > listmaior:
-            listmaior = listanum[c]
-        if listanum[c] < listmenor:
-            listmenor = listanum
-print(f'Valores que vc digitou {listanum}')
-print(f'O maior valor foi {listmaior}')
-print(f'O menor valor foi {listmenor} ')
+v1 = []
+while True:
+    v1.append(int(input('Digite um valor: ')))
+    resp = str(input('Quer continuar ? [S/N] '))
+    if resp in 'Nn':
+        break
+print(f'Você digitou {len(v1)} elementos.')
+v1.sort(reverse=True)
+print(f'Os valores de ordem descrecentes {v1}')

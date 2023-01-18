@@ -61,5 +61,52 @@ print(f'O menor valor foi {listmenor} ')
 numeros = list()
 while True:
     n = int(input('Digite um valor:'))
-    r = str(input('Quer continuar ? [N/S]')).strip
-    if r in 'N'
+    if n not in numeros:
+        numeros.append(n)
+        print('Valor add com sucesso.')
+    else:
+        print('Valor duplicado')
+    r = str(input('Quer continuar ? [N/S]')).strip().upper()
+    if r in 'N':
+        break
+print('Acabou')
+print(f'Voce digitou os valores [{numeros}]')
+print(numeros.sort())
+
+
+#Lista ordenada sem repetições
+lista = []
+for contador in range (0 , 5):
+    vari = int(input('Digite um valor:'))
+    if contador == 0 or vari > lista[-1]:
+        lista.append(vari)
+    #elif n > lista[len(lista)-1]: #pegar o ultimo valor ou pode botar lista[-1]:
+        #lista.append(vari)
+    else:
+        pos = 0
+        while pos < len(lista):
+            if vari <= lista[pos]:
+                lista.insert(pos , vari)
+                break
+            pos += 1
+print(f'Os valores digitados foram {lista}')
+print('Fim.........................................')
+
+
+
+#Extraindo dados de uma lista
+v1 = []
+while True:
+    v1.append(int(input('Digite um valor: ')))
+    resp = str(input('Quer continuar ? [S/N] '))
+    if resp in 'Nn':
+        break
+print(f'Você digitou {len(v1)} elementos.')
+v1.sort(reverse=True)
+print(f'Os valores de ordem descrecentes {v1}')
+if 5 in v1:
+    print('O valor 5 está na lista.')
+else:
+    print('O valor 5 n foi encontrado na lista.')
+
+        
