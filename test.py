@@ -1,9 +1,19 @@
-v1 = []
+
+
+#Dividindo valores em varias listas
+n3 = list()
+par = list()
+impar = list()
 while True:
-    v1.append(int(input('Digite um valor: ')))
-    resp = str(input('Quer continuar ? [S/N] '))
-    if resp in 'Nn':
+    n3.append(int(input('Digite um numero: ')))
+    res = str(input('Quer continuar? [S/N] '))
+    if res in 'Nn':
         break
-print(f'Você digitou {len(v1)} elementos.')
-v1.sort(reverse=True)
-print(f'Os valores de ordem descrecentes {v1}')
+for i , v in enumerate(n3):
+    if v % 2 == 0:
+        par.append(v)
+    elif v % 2 == 1:
+        impar.append(v)
+print(f'A lista compelta é {n3}')
+print(f'A lista de par é {par}')
+print(f'A lista de impar é {impar}')
