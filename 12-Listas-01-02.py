@@ -1,3 +1,4 @@
+from random import randint
 g = [['J' , 19] , ['A' , 33] , ['Jo', 13] , ['Maria' , 45]]
 for p in g:
     print(p)
@@ -72,4 +73,73 @@ for l in range(0,3):
     for coluna in range(0,3):
         print(f'[{matriz[l][coluna]:^5}]', end=' ')
     print()
-        
+    
+    
+    
+    
+#Mais Matriz
+spar = ss = scol = 0
+for l in range(0,3):
+    for coluna in range(0,3):
+        matriz[l][coluna] = int(input(f'Digite um numero para [{l},{coluna}]:'))
+for l in range(0,3):
+    for coluna in range(0,3):
+        print(f'[{matriz[l][coluna]:^5}]', end=' ')
+        if matriz[l][coluna] % 2 ==0:
+            spar += matriz[l][coluna]
+    print()
+print(f'A soma dos valores pares é {spar}')
+for l in range(0,3):
+    scol += matriz[l][2]
+print(f'A soma da  terceira coluna é {scol}')
+for coluna in range(0,3):
+    if coluna == 0:
+        ss = matriz[1][coluna]
+    elif matriz[1][coluna]>ss:
+        ss = matriz[1][coluna]
+print(f'O maior valor da coluna linha é {ss}.')
+
+
+#Palpites para a Mega Sena
+lista1 = list()
+jogos = list()
+cont = 0
+quant = int(input('Quantos jogos você quer?:'))
+totj = 1
+while totj <= quant:
+    cont = 0
+    while True:
+        n1 = randint(1,60)
+        if n1 not in lista1:
+            lista1.append(n1)
+            cont += 1
+        if cont >= 6:
+            break
+    lista1.sort()
+    jogos.append(lista1[:])
+    lista1.clear()
+    totj += 1
+    print(f'Os numero sorteados foram {lista1}.')
+    
+# Boletim com listas compostas
+ficha = list()
+while True:
+    nome6 = str(input('Nome:'))
+    nota5 = float(input('Nota1:'))
+    nota4 = float(input('Nota2:'))
+    media = (nota4 + nota5) / 2
+    ficha.append([nome6 , [nota4 , nota5] , media])
+    re = str(input('Quer continuar ? [S/N]: ')).strip().upper()
+    if re in 'N':
+        break
+print(f'{"No.":<4}{"NOME6":<10}{"MEDIA":>8}')
+for i , a in enumerate(ficha):
+    print(f'{i:<4}{a[0]:<10}{a[2]:>8.1f}')
+while True:
+    opc = int(input('Mostrar notas de qual aluno? (999 interrompe):'))
+    if opc == 999:
+        print('Finalizado')
+        break
+    if opc <= len(ficha) -1:
+        print(f'Notas de {ficha[opc][0]}')
+print('Volte sempre.')
