@@ -1,0 +1,10 @@
+t = list
+t.append(str('Matheus'))
+t.append(int(40))
+g = list()
+g.append(t)
+g.append(t[:])
+t[0] = str('Maria')
+t[1] = int(22)
+g.append(t[:])
+print(g)
