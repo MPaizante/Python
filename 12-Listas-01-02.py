@@ -5,9 +5,9 @@ for p in g:
     
 gal = list()
 d = list()
-for c in range(0,5):
-    d.append(str('Nome:'))
+for c in range(0,3):
+    d.append(str(input('Nome:')))
     d.append(int(input('Idade:')))
     gal.append(d[:])
-    d.clear()
+    
 print(gal)
