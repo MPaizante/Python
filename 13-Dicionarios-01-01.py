@@ -1,6 +1,7 @@
 from random import randint
 from time import sleep
 from operator import itemgetter
+from datetime import datetime
 pessoas = {'nome' : 'Matheus', 'sexo' : 'M' , 'idade' : '23'}
 pessoas['peso'] = 70
 print (pessoas['idade'])
@@ -64,6 +65,47 @@ for ii , vi in enumerate(ranking):
 
 
 #Cadastro de trabalhador em Python
+dados = dict()
+dados['nome'] = str(input('Nome:'))
+nasc = int(input('Ano de nascimento:'))
+dados['idade'] = datetime.now().year - nasc
+dados['ctps'] = int(input('Carteira de Trabalho (0 não tem): '))
+if dados ['ctps'] != 0:
+    dados['contratação'] = int(input('Ano de contratação:'))
+    dados['salario'] = float(input('Salario:'))
+    dados['aposentadoria'] = dados['idade'] + ((dados['contratação'] + 35) - datetime.now().year)
+for t , w in dados.items():
+    print(f'  -{t} tem o valor {w}')
+    
+#Cadastro de Jogador de Futebol
+jog = dict()
+partidas = list()
+jog ['nome'] = str(input('Nome do Jogador:'))
+tot = int(input(f'Quantas partidas {jog["nome"]} jogou?'))
+for ct in range(0 , tot):
+    partidas.append(int(input(f'    Quantos gols na partida {ct+1}?   ')))
+jog['gols'] = partidas[:]
+jog['total'] = sum(partidas)
+for ke , vt in jog.items():
+    print(f'O campo {ke} tem o valor {vt} ')
+print(jog)
+print(partidas)                   
+print(f'O jogador {jog["nome"]} jogouj {len(jog["gols"])} partidas. ')
+for iii , vvv in enumerate(jog['gols']):
+    print(f'             => Na partida {iii}, fez {vvv} gols.  ')
+print(f'Foi um total de {jog["total"]} gols. ')
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
