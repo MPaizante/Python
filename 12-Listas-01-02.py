@@ -31,7 +31,7 @@ while True:
             men = temp[1]
     princ.append(temp[:])
     temp.clear()
-    resp = str(input('Digite se quer continuar. [S/N]')).upper().strip()
+    resp = str(input('Digite se quer continuar. [S/N]')).upper()[0].strip()
     if resp in 'N':
         break
 print(f'Os dados foram {princ}')
@@ -129,7 +129,7 @@ while True:
     nota4 = float(input('Nota2:'))
     media = (nota4 + nota5) / 2
     ficha.append([nome6 , [nota4 , nota5] , media])
-    re = str(input('Quer continuar ? [S/N]: ')).strip().upper()
+    re = str(input('Quer continuar ? [S/N]: ')).strip().upper()[0]
     if re in 'N':
         break
 print(f'{"No.":<4}{"NOME6":<10}{"MEDIA":>8}')

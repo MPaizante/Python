@@ -96,6 +96,46 @@ for iii , vvv in enumerate(jog['gols']):
 print(f'Foi um total de {jog["total"]} gols. ')
 
 
+#Unindo Dicionario e lista.
+p = dict()
+galera = list()
+soma5 = media5 = 0
+while True:
+    p['nome'] = str(input('Nome:'))
+    while True:
+        p['sexo'] = str(input('Sexo:')).upper()[0]
+        if p['sexo'] in 'MF':
+            break
+        print('ERRO')
+    p['idade'] = int(input('Idade:'))
+    soma5 += p['idade']
+    galera.append(p.copy())
+    while True:
+        r = str(input('Quer continuar?')).upper()[0]
+        if r in 'SN':
+            break
+        print('Erro!')
+    if r == 'S':
+        break
+print(galera)
+print(f'Ao todo temos {len(galera)} pessoas cadastradas. ')
+media5= soma5 / len(galera)
+print(f'A media das idade é de {media5:5.2f} anos. ')
+print(f'As mulheres cadastradas foram' , end=' ')
+for ppp in galera:
+    if ppp['sexo'] in 'Ff':
+        print(f'{p["nome"]} ', end=' ')
+print()
+print('Lista das pessaos acima da media:', end='')
+if ppp in galera:
+    if ppp['idade'] >= media5:
+        print('        ')
+        for kkkk , vvvvv in ppp.items():
+            print(f'{kkkk} = {vvvvv} ', end=' ')
+            print()
+print('<< Encerrado >>')
+
+#Aprimorando Dicionarios
 
 
 

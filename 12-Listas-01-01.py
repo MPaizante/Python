@@ -66,7 +66,7 @@ while True:
         print('Valor add com sucesso.')
     else:
         print('Valor duplicado')
-    r = str(input('Quer continuar ? [N/S]')).strip().upper()
+    r = str(input('Quer continuar ? [N/S]')).strip().upper()[0]
     if r in 'N':
         break
 print('Acabou')
