@@ -56,3 +56,26 @@ ini = int(input('Inicio:'))
 fim = int(input('Fim:'))
 pas = int(input('Passo:'))
 cont(ini , fim , pas)
+
+#Função que descobre o maior
+def maior (*nu):
+    cc = maior = 0
+    print('\nAnalisando os valores...')
+    for valor in nu:
+        print(f'{valor}', end=' ',flush=True)
+        sleep(0.3)
+        if cc == 0:
+            maior = valor
+        else:
+            if valor > maior:
+                maior = valor
+        cc += 1 
+    print(f'Foram informados {cc} valores ao todo. ')
+    print(f'O maior valor informado foi {maior}. ')
+            
+
+maior(2 ,9 , 4, 7 , 1)
+maior( 4 , 7 , 0)
+maior( 1 , 2 )
+maior(6)
+
