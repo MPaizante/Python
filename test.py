@@ -1,25 +1,15 @@
-from random import randint
+def ficha (jog = '<Desconhecido>', gol = 0):
+    print(f'O jogador {jog} fez {gol} gol(s) no campeonato.' )
 
 
 
-def sorteia(lista):
-    print('Sorteando 5 valores de lista:')
-    for ct in range(0, 5):
-        nt = randint(1,10)
-        lista.append(nt)
-        print(f'{nt}', end=' ', flush=True)
-    print('pronto')
-    
- 
-def somaPar(lista):   
-    ssoma = 0
-    for vvalor in lista:
-        if vvalor % 2 == 0:
-            ssoma += vvalor
-    print(f'Somando os valores par de {lista}, temos {ssoma}.')
-    
-    
-nnumeros = list()
-sorteia(nnumeros)
-print(nnumeros)
-somaPar(nnumeros)
+nome = str(input('Nome do jogador:'))
+gols = str(input('Numero de gols:'))
+if gols.isnumeric():
+    gols = int(gols)
+else:
+    gols= 0
+if nome.strip() == '':
+    ficha(gol=gols)
+else:
+    ficha(nome , gols)

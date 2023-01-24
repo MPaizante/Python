@@ -11,5 +11,41 @@ def voto(ano):
         return f'Com {idade} anos o voto é obrigatorio'
 
 
-print(voto(2000))
+nasc = int(input('Em que ano nasceu?:'))
+print(voto(nasc))
 mes = date.today().month 
+
+#função para fatorial
+def fatorial (n ,show=False):
+    f = 1
+    for c in range(n , 0 , -1):
+        if show:
+            print(c , end='')
+            if c > 1:
+                print(f'{c} x ', end='')
+            else:
+                print(' = ', end='')
+        f *= c
+    return f
+    
+    
+print(fatorial(5 , show=True))
+
+
+#Ficha do Jogador
+
+def ficha (jog = '<Desconhecido>', gol = 0):
+    print(f'O jogador {jog} fez {gol} gol(s) no campeonato.' )
+
+
+
+nome = str(input('Nome do jogador:'))
+gols = str(input('Numero de gols:'))
+if gols.isnumeric():
+    gols = int(gols)
+else:
+    gols= 0
+if nome.strip() == '':
+    ficha(gol=gols)
+else:
+    ficha(nome , gols)
