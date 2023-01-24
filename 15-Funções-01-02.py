@@ -67,3 +67,51 @@ def leiaInt(msg):
 
 n1 = leiaInt('Digite um numero:')
 print(f'Voce acabou de digitar o numero {n1}')
+
+#Analisando e gerando dicionarios
+
+def notas (*n3, sit=False):
+    r1 = dict()
+    r1['total'] = len(n3)
+    r1['maior'] = max(n3)
+    r1['menor'] = min(n3)
+    r1['media'] = sum(n3)/len(n3)
+    if sit:
+        if r1['media'] > 7:
+            r1['situação'] = 'boa'
+        elif r1['media'] >=5:
+            r1['situação'] = 'razoavel'
+        else:
+            r1['situação'] = 'rui,'
+    return r1
+
+resp1 = notas (5.5 , 2.5 , 9 , 8.5, sit=True)
+print(resp1)
+
+#Interatividade helping system in python
+c1 =('\033[m'
+     '\033[0;30;41m');
+
+
+def ajuda(com):
+    help(com)
+    
+    
+def titulo1(msg, cor=0):
+    tam = len(msg)+4
+    print(c1[cor], end=' ')
+    print('~'*tam)
+    print(f'{msg}')
+    print('~'*tam)
+    print(c1[0] , end='')
+
+
+comando = ''
+while True:
+    titulo1('Sistema de Ajuda')
+    comando = str(input("função ou biblioteca"))
+    if comando.upper() == 'Fim':
+        break
+    else:
+        ajuda(comando)
+titulo1('Até logo!')

@@ -1,17 +1,26 @@
-def leiaInt(msg):
-    ok = False
-    v1 = 0
-    while True:
-        n1 = str(input(msg))
-        if n1.isnumeric():
-            v1 = int(n1)
-            ok = True
-        else:
-            print('\033[0;31mErro! Digite novamente.\033[m')
-        if ok:
-            break
-    return v1
+c1 =('\033[m'
+     '\033[0;30;41m');
 
 
-n1 = leiaInt('Digite um numero:')
-print(f'Voce acabou de digitar o numero {n1}')
+def ajuda(com):
+    help(com)
+    
+    
+def titulo1(msg, cor=0):
+    tam = len(msg)+4
+    print(c1[cor], end=' ')
+    print('~'*tam)
+    print(f'{msg}')
+    print('~'*tam)
+    print(c1[0] , end='')
+
+
+comando = ''
+while True:
+    titulo1('Sistema de Ajuda')
+    comando = str(input("função ou biblioteca"))
+    if comando.upper() == 'Fim':
+        break
+    else:
+        ajuda(comando)
+titulo1('Até logo!')
