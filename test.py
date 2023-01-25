@@ -1,26 +1,53 @@
-c1 =('\033[m'
-     '\033[0;30;41m');
+from time import sleep
+
+def linha(tam = 42):
+    return '-'*tam
 
 
-def ajuda(com):
-    help(com)
+def cabecalho(txt):
+    print(linha())
+    print(txt.center(42))
+    print(linha())
     
     
-def titulo1(msg, cor=0):
-    tam = len(msg)+4
-    print(c1[cor], end=' ')
-    print('~'*tam)
-    print(f'{msg}')
-    print('~'*tam)
-    print(c1[0] , end='')
+def leiaint(msg):
+    while True:
+        try:
+            n1 = int(input(msg))
+        except (ValueError , TypeError) :
+            print('\033[31mErro: digte um numero inteiro valido.')
+            continue
+        except (KeyboardInterrupt):
+            print('\n\033Entrada de dados interrompida pelo usuario')
+            return 0
+        else:
+            return n1
+        
+    
+def menu(lista):
+    cabecalho('Menu Principal')
+    c = 1 
+    for item in lista:
+        print(f'{c} - {item}')
+        c+=1
+    print(linha())
+    opc = leiaint('Sua Opção:')
+    
+    
+    
+    
+#from import ex115.tib.interface import*
 
-
-comando = ''
 while True:
-    titulo1('Sistema de Ajuda')
-    comando = str(input("função ou biblioteca"))
-    if comando.upper() == 'Fim':
+    resposta = menu(['Ver Pessoas Cadastradas', 'Cadastrar Pessoas' , ' Sair do Sistema'])
+    if resposta == 1:
+        print('Opção 1')
+    elif resposta == 2:
+        print('Opção 2')
+    elif resposta == 3:
+        cabecalho('Saindo do Sistema')
         break
     else:
-        ajuda(comando)
-titulo1('Até logo!')
+        print('ERRO!')
+    sleep(0.5)
+
