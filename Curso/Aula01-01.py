@@ -91,21 +91,21 @@ def listarCarro():
         p = p + 1
     os.system("pause")
     
-    ret = Menu()
-    while ret < "7":
-        if(ret == "1"):
+ret = Menu()
+while ret < "7":
+    if(ret == "1"):
             NovoCarro()
-        elif ret == "2":
+    elif ret == "2":
             informacoes()
-        elif ret == "3":
+    elif ret == "3":
             excluirCarro()
-        elif ret == "4":
+    elif ret == "4":
             ligarCarro()
-        elif ret == "5":
+    elif ret == "5":
             desligarCarro()
-        elif ret == "6":
+    elif ret == "6":
             listarCarro()
-        ret = Menu()
+    ret = Menu()
 
 
         
