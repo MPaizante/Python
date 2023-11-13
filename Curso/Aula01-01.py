@@ -18,10 +18,10 @@ class Carro:
         self.ligado=False
         
     def info(self):
-        print("Nome.............:", self.nome)
-        print("Pot..............:", self.pot)
-        print("VelMax...........:", self.velMax)
-        print("Ligado...........:", ("Sim" if self.ligado else "Não"))
+        print("Nome.............:"+ self.nome)
+        print("Pot..............:"+ str(self.pot))
+        print("VelMax...........:"+ str(self.velMax))
+        print("Ligado...........:"+ ("Sim" if self.ligado else "Não"))
 
 def Menu():
     os.system("cls") or None
@@ -32,7 +32,7 @@ def Menu():
     print("5 - Desligar Carro")
     print("6 - Listar Carro")
     print("7 - Sair")
-    print("Quantidade de carros",len(carros))
+    print("Quantidade de carros"+str(len(carros)))
     opc = input("Digite uma opção: ")
     return opc
 
@@ -58,7 +58,7 @@ def excluirCarro():
     os.system("cls") or None
     n = input("Numero do Carro que quer excluir: ")
     try:
-        del carros[int(n)].info()
+        del carros[int(n)]
     except:
         print("Carro não existe na lista")
     os.system("pause")
@@ -67,7 +67,7 @@ def ligarCarro():
     os.system("cls") or None
     n = input("Numero do Carro: ")
     try:
-        carros[int(n)].info()
+        carros[int(n)].ligar()
         print("Carro Ligado!")
     except:
         print("Carro não existe na lista")
@@ -77,7 +77,7 @@ def desligarCarro():
     os.system("cls") or None
     n = input("Numero do Carro: ")
     try:
-        carros[int(n)].info()
+        carros[int(n)].desligar()
         print("Carro Desligado!")
     except:
         print("Carro não existe na lista")
@@ -91,6 +91,27 @@ def listarCarro():
         p = p + 1
     os.system("pause")
     
+    ret = Menu()
+    while ret < "7":
+        if(ret == "1"):
+            NovoCarro()
+        elif ret == "2":
+            informacoes()
+        elif ret == "3":
+            excluirCarro()
+        elif ret == "4":
+            ligarCarro()
+        elif ret == "5":
+            desligarCarro()
+        elif ret == "6":
+            listarCarro()
+        ret = Menu()
+
+
+        
+
+
+            
     
     
     
