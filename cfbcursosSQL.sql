@@ -1,1 +1,1 @@
-alter table cliente modify column i_idade_cliente tinyint;
+alter table cliente drop column i_idade_cliente;
