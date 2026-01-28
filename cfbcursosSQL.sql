@@ -18,7 +18,11 @@ insert into venda values(17,4,'2020-09-07',12.99);
 insert into venda values(18,3,'2020-12-24',59.90);
 insert into venda values(19,8,'2020-06-25',235.50);
 insert into venda values(20,2,'2020-06-26',7.99);*/
-select * from venda;
+insert into cliente values(
+(select max(c.i_cliente_cliente)+1 from cliente c)
+,"CC","00000060000","1989-12-03",2);
+
+select * from cliente;
 
 
 
