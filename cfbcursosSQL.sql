@@ -16,9 +16,9 @@ update cliente set s_nome_cliente = 'Matheus P', s_cpf_cliente = '77777777777' w
 select * from cliente;*/
 
 select 
-	i_cliente_cliente as ID, upper(s_nome_cliente) as Nome  , i_tipo_cliente as Tipo
+	tbc.i_cliente_cliente as ID, upper(tbc.s_nome_cliente) as Nome  , tbc.i_tipo_cliente as Tipo
 from 
-	cliente;
+	cliente tbc;
 
 
 
