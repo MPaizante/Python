@@ -21,7 +21,7 @@ insert into venda values(20,2,'2020-06-26',7.99);
 insert into cliente values(
 (select max(c.i_cliente_cliente)+1 from cliente c)
 ,"CC","00000060000","1989-12-03",2);*/
-select * from niverMesAtual;
+select * from cliente where i_tipo_cliente = 3 and (month(d_nasc_cliente )>=5 and month(d_nasc_cliente) <=9);
 
 
 
