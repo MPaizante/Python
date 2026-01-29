@@ -1,9 +1,4 @@
-select 
-	v.i_venda_venda,c.s_nome_cliente, c.s_cpf_cliente, v.d_data_venda, v.f_valor_venda, tc.s_dsctipocliente_tipocliente
-from venda v
-	inner join cliente c on c.i_cliente_cliente = v.i_cliente_cliente inner join tipocliente tc on c.i_tipo_cliente = tc.i_tipocliente_tipocliente
-;
-
+select count(v.i_venda_venda), v.d_data_venda as Vendas from venda v group by d_data_venda;
 
 
 
