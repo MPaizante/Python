@@ -1,4 +1,7 @@
-select count(v.i_venda_venda), v.d_data_venda as Vendas from venda v group by v.d_data_venda having count(v.i_venda_venda)>1;
+select c.s_nome_cliente, v.i_venda_venda, v.f_valor_venda from venda v 
+inner join cliente c on c.i_cliente_cliente = v.i_cliente_cliente
+order by f_valor_venda desc limit 3;
+
 
 
 
