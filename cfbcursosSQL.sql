@@ -1,7 +1,4 @@
-select c.s_nome_cliente, v.i_venda_venda, v.f_valor_venda from venda v 
+select  c.s_nome_cliente, v.f_valor_venda   from venda v
 inner join cliente c on c.i_cliente_cliente = v.i_cliente_cliente
-order by f_valor_venda desc limit 3;
-
-
-
+ where f_valor_venda = (select max(f_valor_venda) from venda);
 
