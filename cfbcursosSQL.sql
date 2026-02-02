@@ -1,4 +1,7 @@
-select  c.s_nome_cliente, v.f_valor_venda   from venda v
-inner join cliente c on c.i_cliente_cliente = v.i_cliente_cliente
- where f_valor_venda = (select max(f_valor_venda) from venda);
-
+/*
+sum - soma
+avg - media
+count - contagem
+round - arredondar
+*/
+select round(avg(f_valor_venda),2) from venda where f_valor_venda > (select min(f_valor_venda)  from venda) and f_valor_venda < (select max(f_valor_venda)  from venda);
