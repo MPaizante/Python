@@ -5,4 +5,5 @@ count - contagem
 round - arredondar
 */
 
-select * from cliente c1, cliente c2 where c1.i_tipo_cliente = c2.i_tipo_cliente and c1.s_nome_cliente = 'Matheus P' order by c1.i_tipo_cliente;
+select 'Cliente' as Tabela,i_cliente_cliente,s_nome_cliente from cliente union select 'Cliente_aux' as Tabela,i_cliente_cliente,s_nome_cliente from cliente_aux union 
+select  'Venda', i_cliente_cliente, i_venda_venda from venda v inner join cliente c on v.i_cliente_cliente = c.i_cliente_cliente;
