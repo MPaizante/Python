@@ -1,9 +1,10 @@
-/*
-sum - soma
-avg - media
-count - contagem
-round - arredondar
-*/
+DELIMITER $$
+CREATE PROCEDURE canal(in curso varchar(50))
+BEGIN
+	declare x varchar(20);
+    set x = 'Matheus Paizante';
+    select x, curso;
+END $$
 
-
-select *, round((f_precoun_produtovenda * ifnull(i_qtde_produtovenda,0)),2) as 'Total' from produtovenda;
+DELIMITER ;
+CALL canal('SQL');
