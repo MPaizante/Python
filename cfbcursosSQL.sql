@@ -1,15 +1,20 @@
 delimiter $$
-create procedure loopLoop(in max int,out soma int)
+create procedure somaVendas(out soma float(10,2))
 begin
-declare x int default 0;
-	meuloop : loop
-	if(x >=max) then
-		leave meuloop;
-	end if;
-    set x = x + 1;
-	end loop;
-    set soma = x;
+declare vv float(10,2) default 0;
+declare fimloop int default 0;
+
+declare meucursor cursor for select f_valor_venda from venda;
+declare continue handler for not found set fimloop = 1;
+
+set soma = 0;
+open meucursor;
+while(fimloop != 1)do
+fetch meucursor into vv;
+set soma = soma + vv;
+end while;
+	
 end $$
 delimiter ;
-call loopLoop(50,@ret);
+call somaVendas(@ret);
 select @ret;
