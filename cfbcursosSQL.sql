@@ -5,5 +5,5 @@ count - contagem
 round - arredondar
 */
 
-select 'Cliente' as Tabela,i_cliente_cliente,s_nome_cliente from cliente union select 'Cliente_aux' as Tabela,i_cliente_cliente,s_nome_cliente from cliente_aux union 
-select  'Venda', i_cliente_cliente, i_venda_venda from venda v inner join cliente c on v.i_cliente_cliente = c.i_cliente_cliente;
+
+select *, round((f_precoun_produtovenda * ifnull(i_qtde_produtovenda,0)),2) as 'Total' from produtovenda;
